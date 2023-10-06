@@ -4,6 +4,107 @@
 
 The Laravel Resume API is a web application developed using the Laravel framework and Laravel Sail for Docker-based development. This API allows users to create and manage their professional resumes. Additionally, it includes Swagger documentation for easy reference and interaction.
 
+```bash
+
+{
+    "success": true,
+    "message": "success",
+    "data": [
+        {
+            "name": "Samson Ude",
+            "title": "Senior Software Engineer | Mobile Developer | Full Stack Developer",
+            "about": "Seasoned Senior Software Engineer: Full-stack proficiency (PHP, Java, Laravel, Javascript, Dart, ReactJS), mobile app dev (Flutter), DBs (MySQL, PostgreSQL), Docker, CI/CD (CloudBuild, GitHub Actions), cloud (Google, AWS). Passionate about innovative solutions.",
+            "education": [
+                {
+                    "institution": "University of Ibadan - Oyo State, Ibadan, Nigeria",
+                    "degree": "Bachelor of Science: Electrical/Electronics Engineering",
+                    "date-range": "2004 - 2009",
+                    "user_id": 1
+                }
+            ],
+            "skills": [
+                "PHP",
+                "Laravel",
+                "Java",
+                "Flutter",
+                "React",
+                "Mobile App Development",
+                "Docker",
+                "PHPUnit",
+                "GraphQL",
+                "C#",
+                "VB.Net"
+            ],
+            "experiences": [
+                {
+                    "title": "Senior Software Engineer",
+                    "company": "QNetix Technologies LTD",
+                    "date-range": "2020 - Current",
+                    "responsibilities": [
+                        "Built and maintained various PHP-based applications, using Laravel framework",
+                        "Worked on real-time notifications for multiple web applications, uing Pusher and WebSockets"
+                    ]
+                },
+                {
+                    "title": "Senior Software Engineer",
+                    "company": "Tivas Technologies",
+                    "date-range": "2017 - 2020",
+                    "responsibilities": [
+                        "Developed custom packages to reuse code across multiple projects, reducing development time and improving efficiency"
+                    ]
+                },
+                {
+                    "title": "Full Stack Developer",
+                    "company": "VAS2Nets Technologies",
+                    "date-range": "2013 - 2017",
+                    "responsibilities": [
+                        "Assisted in the migration of existing PHP applications to Laravel framework resulting in improvement performance and scalability"
+                    ]
+                }
+            ],
+            "projects": [
+                {
+                    "name": "Inventro",
+                    "url": "https://inventroapp.com/",
+                    "description": "Inventro is a dynamic business management solution leveraging the power of technology to optimize operations. Built with precision using cutting-edge technologies like Flutter for the frontend and Laravel for the backend, it ensures a seamless user experience. With its cloud-based architecture, businesses can access their data securely from anywhere. Inventro empowers businesses with a robust point-of-sale system, insightful sales analytics, efficient inventory management, and expense tracking, revolutionizing the way they operate and grow",
+                    "repository": "https://github.com/psalmsin1759/inventro_mobile",
+                    "stacks": [
+                        "PHP",
+                        "Laravel",
+                        "Flutter",
+                        "Dart",
+                        "Android Development",
+                        "iOS Development",
+                        "Docker",
+                        "CI/CD - Github Workflow",
+                        "CI/CD - Github Actions",
+                        "Firebase",
+                        "Google Cloud Run",
+                        "Google Pub/Sub",
+                        "Google Storage"
+                    ]
+                },
+                {
+                    "name": "ChurchKonnect",
+                    "url": "https://churchkonnect.com/",
+                    "description": "Churchkonnect is a platform that provides a mobile app for churches with a variety of features. Some of these features include the ability to livestream services and events, accept online donations, provide access to the bible, offer audio and video sermons, and create groups and communities within the app",
+                    "repository": "https://github.com/psalmsin1759/churchkonnect_mobile",
+                    "stacks": []
+                },
+                {
+                    "name": "ChurchKonnect",
+                    "url": "https://churchkonnect.com/",
+                    "description": "Churchkonnect is a platform that provides a mobile app for churches with a variety of features. Some of these features include the ability to livestream services and events, accept online donations, provide access to the bible, offer audio and video sermons, and create groups and communities within the app",
+                    "repository": "https://github.com/psalmsin1759/churchkonnect_mobile",
+                    "stacks": []
+                }
+            ]
+        }
+    ]
+}
+
+```
+
 ## Features
 
 -   **Profile Management**: Create and update user profiles with personal information.
