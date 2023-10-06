@@ -1,4 +1,4 @@
-# Laravel Resume API
+# Laravel Resume API - Test-Driven Application
 
 ## Introduction
 
@@ -148,6 +148,26 @@ php artisan key:generate
 ```
 
 The API should now be accessible at http://localhost.
+
+### Testing
+
+-   This is a test-driven Laravel application, and tests play a crucial role in ensuring its reliability. To run tests, follow these steps:
+
+-   Make sure you have PHPUnit installed. If it's not installed, you can install it using Composer:
+
+```bash
+./vendor/bin/sail composer require --dev phpunit/phpunit
+```
+
+-   Navigate to the root directory of your application in your terminal.
+
+-   Run PHPUnit to execute the tests:
+
+```bash
+vendor/bin/phpunit
+```
+
+-   This command will run all the tests in your application and display the results.
 
 ### API Endpoints
 

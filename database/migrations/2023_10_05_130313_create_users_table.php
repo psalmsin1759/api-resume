@@ -18,9 +18,9 @@ return new class extends Migration
             $table->text("about")->nullable();
             $table->string("phone",20)->nullable();
             $table->string("email",50)->nullable();
-            $table->string("portfolio_url",50)->nullable();
-            $table->string("github_url",50)->nullable();
-            $table->string("linkedin_url",50)->nullable();
+            $table->string("portfolio_url",100)->nullable();
+            $table->string("github_url",100)->nullable();
+            $table->string("linkedin_url",100)->nullable();
             $table->timestamps();
         });
     }

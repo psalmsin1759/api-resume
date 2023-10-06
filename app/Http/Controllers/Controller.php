@@ -29,6 +29,8 @@ class Controller extends BaseController
                 'name' => $user->name,
                 'title' => $user->title,
                 'about' => $user->about,
+                'phone' => $user->phone,
+                'email' => $user->email,
                 'education' => $user->education,
                 'skills' => $user->skills->pluck('name')->toArray(),
                 'experiences' => $user->experiences->map(function ($experience) {
