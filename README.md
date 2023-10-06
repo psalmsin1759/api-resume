@@ -149,7 +149,7 @@ php artisan key:generate
 
 The API should now be accessible at http://localhost.
 
-### Testing
+## Testing
 
 -   This is a test-driven Laravel application, and tests play a crucial role in ensuring its reliability. To run tests, follow these steps:
 
@@ -169,7 +169,7 @@ vendor/bin/phpunit
 
 -   This command will run all the tests in your application and display the results.
 
-### API Endpoints
+## API Endpoints
 
 -   POST /api/register: Register a new user.
 -   POST /api/login: Authenticate and obtain a JWT token.
