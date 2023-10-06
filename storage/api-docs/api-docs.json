@@ -1,0 +1,185 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel Resume API - Test-Driven Application",
+        "description": "The Laravel Resume API is a web application developed using the Laravel framework and Laravel Sail for Docker-based development. This API allows users to create and manage their professional resumes. Additionally, it includes Swagger documentation for easy reference and interaction.",
+        "contact": {
+            "name": "Samson Ude",
+            "email": "samson_ude@yahoo.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/getresume": {
+            "get": {
+                "tags": [
+                    "Resume"
+                ],
+                "summary": "Get user's resume data",
+                "operationId": "9dea9a16cc57164ed84944f3a4fecf71",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "success"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "John Doe"
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "Software Developer"
+                                                    },
+                                                    "about": {
+                                                        "type": "string",
+                                                        "example": "Experienced software developer."
+                                                    },
+                                                    "phone": {
+                                                        "type": "string",
+                                                        "example": "(123) 456-7890"
+                                                    },
+                                                    "email": {
+                                                        "type": "string",
+                                                        "example": "john.doe@example.com"
+                                                    },
+                                                    "education": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "properties": {
+                                                                "institution": {
+                                                                    "type": "string",
+                                                                    "example": "University of Example"
+                                                                },
+                                                                "degree": {
+                                                                    "type": "string",
+                                                                    "example": "Bachelor of Science"
+                                                                },
+                                                                "date-range": {
+                                                                    "type": "string",
+                                                                    "example": "2010 - 2014"
+                                                                },
+                                                                "user_id": {
+                                                                    "type": "integer",
+                                                                    "example": 1
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "skills": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string",
+                                                            "example": "PHP"
+                                                        }
+                                                    },
+                                                    "experiences": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "properties": {
+                                                                "title": {
+                                                                    "type": "string",
+                                                                    "example": "Software Developer"
+                                                                },
+                                                                "company": {
+                                                                    "type": "string",
+                                                                    "example": "Tech Inc."
+                                                                },
+                                                                "date-range": {
+                                                                    "type": "string",
+                                                                    "example": "2015 - Present"
+                                                                },
+                                                                "responsibilities": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                        "type": "string",
+                                                                        "example": "Developed web applications."
+                                                                    }
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "projects": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": "string",
+                                                                    "example": "Project A"
+                                                                },
+                                                                "url": {
+                                                                    "type": "string",
+                                                                    "example": "https://example.com/project-a"
+                                                                },
+                                                                "description": {
+                                                                    "type": "string",
+                                                                    "example": "Description of Project A."
+                                                                },
+                                                                "repository": {
+                                                                    "type": "string",
+                                                                    "example": "https://github.com/user/project-a"
+                                                                },
+                                                                "stacks": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                        "type": "string",
+                                                                        "example": "Laravel"
+                                                                    }
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Resume": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Samson Ude"
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "Senior Software Engineer | Mobile Developer | Full Stack Developer"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Laravel Resume API - Test-Driven Application",
+            "description": "Laravel Resume API - Test-Driven Application"
+        }
+    ]
+}
