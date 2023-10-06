@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Resume API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+The Laravel Resume API is a web application developed using the Laravel framework and Laravel Sail for Docker-based development. This API allows users to create and manage their professional resumes. Additionally, it includes Swagger documentation for easy reference and interaction.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   **Profile Management**: Create and update user profiles with personal information.
+-   **Education**: Add education details such as institution, degree, and date range.
+-   **Skills**: Add and manage skills for your resume.
+-   **Work Experiences**: Add work experiences with job titles, companies, date ranges, and responsibilities.
+-   **Project**: Add projects with title, url, description, repo, and stacks.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Installation
 
-## Learning Laravel
+Follow these steps to set up the Laravel Resume API on your local development environment using Laravel Sail:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone the repository:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    ```bash
+    git clone https://github.com/yourusername/laravel-resume-api.git
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Navigate to the project directory:
 
-## Laravel Sponsors
+```bash
+cd laravel-resume-api
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Install PHP dependencies using Composer:
 
-### Premium Partners
+```bash
+composer install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+4. Generate an application key::
 
-## Contributing
+```bash
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Set up Laravel Sail and start the Docker containers:
 
-## Code of Conduct
+```bash
+./vendor/bin/sail up
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+The API should now be accessible at http://localhost.
 
-## Security Vulnerabilities
+### API Endpoints
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   POST /api/register: Register a new user.
+-   POST /api/login: Authenticate and obtain a JWT token.
+-   GET /api/user: Retrieve user information.
+-   PUT /api/user: Update user information.
+-   GET /api/education: Retrieve education details.
+-   POST /api/education: Add education details.
+-   PUT /api/education/{id}: Update education details.
+-   DELETE /api/education/{id}: Delete education details.
+-   GET /api/skills: Retrieve skills.
+-   POST /api/skills: Add a skill.
+-   PUT /api/skills/{id}: Update a skill.
+-   DELETE /api/skills/{id}: Delete a skill.
+-   GET /api/experiences: Retrieve work experiences.
+-   POST /api/experiences: Add a work experience.
+-   PUT /api/experiences/{id}: Update a work experience.
+-   DELETE /api/experiences/{id}: Delete a work experience.
 
-## License
+### Swagger Documentation
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project includes Swagger documentation for the API. You can access it by navigating to http://localhost/api/documentation after starting the Laravel Sail containers. The Swagger documentation provides detailed information about available endpoints and allows you to interact with the API.
+
+### Contribution
+
+Contributions to the Laravel Resume API project are welcome. If you'd like to contribute, please follow these steps:
+
+-   Fork the repository.
+-   Create a new branch for your feature or bug fix.
+-   Make your changes and commit them with clear and concise messages.
+-   Push your changes to your fork.
+-   Create a pull request to the main repository's main branch.
+
+### License
+
+This project is licensed under the MIT License.
+
+### Acknowledgments
+
+Thanks to the Laravel community for their excellent documentation and resources.
+Inspired by the need for a simple and customizable resume management system.
+Contact
+For any inquiries or feedback, please contact samson_ude@yahoo.com .
