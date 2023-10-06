@@ -4,6 +4,7 @@ FROM composer:2.3.10 as build
 WORKDIR /app
 COPY . /app
 
+
 RUN composer install && composer dumpautoload
 RUN php artisan optimize:clear
 
