@@ -1,0 +1,35 @@
+steps:
+  # Build the Docker image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/$PROJECT_ID/oriflame",
+        "--build-arg",
+        "PHP_VERSION=8.1",
+        ".",
+      ]
+    id: Build
+  # Push the Docker image to Google Container Registry (GCR)
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/oriflame"]
+    id: Push
+  # Deploy the container to Google Cloud Run
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - "run"
+      - "deploy"
+      - "api-resume"
+      - "--image"
+      - "gcr.io/$PROJECT_ID/oriflame"
+      - "--port"
+      - "8080"
+      - "--region"
+      - "us-west1"
+      - "--platform"
+      - "managed"
+    id: Deploy
+
+images:
+  - "gcr.io/$PROJECT_ID/oriflame"
